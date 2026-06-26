@@ -1,0 +1,9 @@
+ip = input('Проверка на корректный IP-адрес:')
+parts = ip.split('.')
+if len(parts) != 4:
+    print("НЕТ")
+else:
+    if all(part.isdigit() and 0 <= int(part) <= 255 for part in parts):
+        print("ДА")
+    else:
+        print("НЕТ")
